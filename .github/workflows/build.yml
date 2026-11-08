@@ -8,13 +8,6 @@ jobs:
       image: kivy/buildozer:latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Set up swap space
-        run: |
-          sudo fallocate -l 4G /swapfile-extra
-          sudo chmod 600 /swapfile-extra
-          sudo mkswap /swapfile-extra
-          sudo swapon /swapfile-extra
           
       - name: Build with Buildozer
         run: |
