@@ -8,9 +8,18 @@ jobs:
       image: kivy/buildozer:latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Set up swap space
+        run: |
+          sudo fallocate -l 4G /swapfile
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+          
       - name: Build with Buildozer
         run: |
           echo y | buildozer -v android debug
+          
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
