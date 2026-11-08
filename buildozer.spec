@@ -435,6 +435,7 @@ ios.codesign.allowed = false
 # p4a.source_dir = /home/vikusya/SouvenirsMobile/.buildozer/android/platform/python-for-android
 # p4a.local_recipes = /home/vikusya/SouvenirsMobile/.buildozer/android/platform/python-for-android
 android.build_tools_version = 29.0.0
+android.accept_sdk_license = True
 
 [buildozer]
 
