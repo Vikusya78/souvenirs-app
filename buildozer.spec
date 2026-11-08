@@ -436,6 +436,7 @@ ios.codesign.allowed = false
 # p4a.local_recipes = /home/vikusya/SouvenirsMobile/.buildozer/android/platform/python-for-android
 android.build_tools_version = 29.0.0
 android.accept_sdk_license = True
+android.gradle_args = -Dorg.gradle.jvmargs=-Xmx2g -Dorg.gradle.daemon=false
 
 [buildozer]
 
